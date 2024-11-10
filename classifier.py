@@ -11,7 +11,16 @@ class Classifier:
     def __init__(self):
         # Load zero-shot classification pipeline with a pre-trained model
         self.classifier = pipeline("zero-shot-classification", model=MODEL_PATH)
-        self.candidate_labels = ["travel_insurance", "travel_policy", "exclusions", "claims process", "cancellation", "excess", "coronavirus"]
+        self.candidate_labels = [
+            "travel_insurance",
+            "travel_policy",
+            "exclusions",
+            "claims_process",
+            "cancellation",
+            "excess_covered",
+            # "excess_covered_travel_insurance",
+            "coronavirus"
+        ]
 
     def classify(self, user_query):
         result = self.classifier(user_query, self.candidate_labels, multi_label=True)

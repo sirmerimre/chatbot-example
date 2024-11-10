@@ -6,11 +6,11 @@ def generate_response(valid_results):
     intent = valid_results[0]['label']
 
     # Generate response based on intent
-    if intent == "policy coverage":
+    if intent == "policy_coverage":
         response = "Your travel insurance policy generally covers medical expenses, trip cancellations, and luggage loss. Please check specific policy terms for more detailed information."
     elif intent == "exclusions":
         response = "Exclusions typically include pre-existing conditions, risky activities, and pandemics. Review your policy's exclusions section for a full list."
-    elif intent == "claims process":
+    elif intent == "claims_process":
         response = "To file a claim, log in to your account, complete the claim form, and submit required documents. The claim processing time varies, usually taking 1-2 weeks."
     elif intent == "cancellation":
         response = "To cancel a policy, please contact our support team for further instructions."
